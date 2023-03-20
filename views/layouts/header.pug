@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css")
+        link(rel="stylesheet", href="js/alertifyjs/css/alertify.css")
+        script(src="js/alertifyjs/alertify.js")
+        title QR
+    body
+        nav(class="navbar navbar-expand-lg bg-body-tertiary")
+            div(class="container-fluid")
+                a(href="/" class="navbar-brand h1") Navbar
+                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup")
+                    span(class="navbar-toggler-icon")
+                div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+                    div(class="navbar-nav")
+                        a(class="nav-link active h4" aria-current="page" href="/") Generate
+                        a(class="nav-link active h4" aria-current="page" href="#") Read
+
+        block content
+
+        //- if errors
+        //-     //- script=`alertify.success(${errors} ,25)`
+        //-     script alertify.success(errors ,25)
+        //-     //- script alertify.success(`${errors}` ,25)
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js")
+        
