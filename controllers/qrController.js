@@ -3,7 +3,7 @@ import qrcode from "qrcode";
 
 let image_qr;
 
-export function renderView(req, res) {
+export function renderViewGenerate(req, res) {
     res.render('index', {image_qr: req.flash("image"), errors: req.flash("messagesErrors")});
 }
 
@@ -25,4 +25,8 @@ export async function generateQR(req, res) {
         req.flash('image', src);
         res.redirect('/');
     });
+}
+
+export function renderViewRead(req, res) {
+    res.render('reader');
 }
