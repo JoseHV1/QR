@@ -1,7 +1,20 @@
 extends layouts/header
 
 block content
-    div(class="m-5 px-2 d-flex justify-content-center")
-        video(id="container_reader" class="p-1 border" style="width:65%")
+    div(class="rounded shadow w-md-75 w-lg-60 w-sm-85 w-90 bg-indigo-white bg-md-indigo-white")
+        div(class="row m-0 p-4")
+            div(class="col-md-6 pe-md-4 ps-md-0")
+                div(class="d-flex mb-5 justify-content-center")
+                    a(class="mx-2 nav-link text-white" href="/") Generate
+                    a(class="mx-2 nav-link text-white" href="/read") Read
 
-    script(src="js/main.js") 
+                h2(class="text-center text-white mb-4") READ
+                div(id="container_result" class="d-none text-center")
+                    h5(class="text-md-dark text-white") QR Url
+                    span(id="result" class="mt-2") 
+
+            div(class="col-md-6 pt-4 d-flex justify-content-center") 
+                video(id="container_reader" class="border" style="width: 17rem; height: 19rem;")
+                
+
+    script(src="js/main.js")

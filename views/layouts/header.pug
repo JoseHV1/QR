@@ -6,26 +6,38 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css")
         link(rel="stylesheet", href="js/alertifyjs/css/alertify.css")
+        link(rel="stylesheet", href="font/font.all.min.css")
+        link(rel="stylesheet", href="font/fontawesome.min.css")
+        link(rel="stylesheet", href="font/regular.min.css")
+        link(rel="stylesheet", href="font/solid.min.css")
+        link(rel="stylesheet", href="font/brands.min.css")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com")
+        link(rel="stylesheet", href="https://fonts.gstatic.com", crossorigin)
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,700;0,800;1,100;1,500;1,700&display=swap" )
         script(src="js/alertifyjs/alertify.js")
-        title QR
+        title QR | Generator And Reader
     body
-        nav(class="navbar navbar-expand-lg bg-body-tertiary")
-            div(class="container-fluid")
-                a(href="/" class="navbar-brand h1") Navbar
-                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup")
-                    span(class="navbar-toggler-icon")
-                div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
-                    div(class="navbar-nav")
-                        a(class="nav-link active h4" aria-current="page" href="/") Generate
-                        a(class="nav-link active h4" aria-current="page" href="/read") Read
+        div(class="d-flex justify-content-center align-items-center flex-column min-vh-100 bg-light py-4 py-md-0")
+            block content
 
-        block content
+            footer(class="py-3 mt-2 bg-body-tertiary")
+                div(class="d-flex justify-content-center")
+                    a(href="https://github.com/JoseHV1" class="font-weight-bold text-secondary")
+                        ion-icon(name="logo-github" target="blank")
 
-        //- if errors
-        //-     //- script=`alertify.success(${errors} ,25)`
-        //-     script alertify.success(errors ,25)
-        //-     //- script alertify.success(`${errors}` ,25)
+                    a(href="https://wa.me/+584243698025?text=Hola,%20me%20interesa%20contactarte" class="mx-4 font-weight-bold text-secondary")
+                        ion-icon(name="logo-whatsapp" target="blank")
 
+                    a(href="https://www.linkedin.com/in/jose-hernandez01" class="font-weight-bold text-secondary")
+                        ion-icon(name="logo-linkedin" target="blank")
+                
+        script(src="font/font-all.min.js")
+        script(src="font/brands.min.js")
+        script(src="font/regular.min.js")
+        script(src="font/solid.min.js")
+        script(src="font/fontawesome.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js")
         script(src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js") 
-        
+        script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+        script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")

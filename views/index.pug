@@ -1,19 +1,31 @@
 extends layouts/header
 
 block content
-    div(class="m-5 px-2")
-        h1(class="text-center mt-1 mb-4") Create QR
-        form(action="generate/qr", method="post")
-            div(class="input-group mb-3 px-5")
-                input(type="url" name="url_text" class="form-control" placeholder="Enter a URL" required)
-                button(class="btn btn-secondary" type="submit") Create
+    div(class="rounded shadow w-md-75 w-lg-60 w-sm-85 w-90 bg-indigo-white bg-md-indigo-white")
+        div(class="row m-0 p-4")
+            div(class="col-md-6 pe-md-4 ps-md-0")
+                div(class="d-flex mb-5 justify-content-center")
+                    a(class="mx-2 nav-link text-white" href="/") Generate
+                    a(class="mx-2 nav-link text-white" href="/read") Read
 
-    if image_qr != ''
-        div(class="my-3 px-4 d-flex justify-content-center")
-            h1(class="text-center")
-            img(id="img" src=`${image_qr}` alt="qr_generated" class="img-thumbnail" style="width: 17rem; height: 17rem;")
+                h2(class="text-center text-white mb-4") GENERATE
+                form(action="generate/qr", method="post")
+                    input(type="url" name="url_text" class="form-control my-2 rounded-pill" placeholder="Enter a URL" required)
+                    
+                    div(class="d-grid gap-2 mt-3")
+                        button(class="btn btn-dark rounded-pill d-block" type="submit") Generate
+        
+            div(class="col-md-6 pt-4")
+                if image_qr != ''
+                    h5(class="text-center text-md-dark text-white") QR Generated
+                    div(class="d-flex justify-content-center")
+                        img(id="img" src=`${image_qr}` alt="qr_generated" style="width: 17rem; height: 17rem;")
+                else
+                    div(class="d-flex justify-content-center")
+                        img(id="img" src="images/qr_code.PNG" alt="qr_generated" style="width: 17rem; height: 17rem;")
 
-    p=`${errors}`
+
+        p=`${errors}`
 
     //- if errors != undefined
         script alertify.success("as", 10)
