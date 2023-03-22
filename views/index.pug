@@ -22,13 +22,7 @@ block content
                         img(id="img" src=`${image_qr}` alt="qr_generated" style="width: 17rem; height: 17rem;")
                 else
                     div(class="d-flex justify-content-center")
-                        img(id="img" src="images/qr_code.PNG" alt="qr_generated" style="width: 17rem; height: 17rem;")
+                        img(id="img" src="/images/qr_code.PNG" alt="qr_generated" style="width: 17rem; height: 17rem;")
 
 
         p=`${errors}`
-
-    //- if errors != undefined
-        script alertify.success("as", 10)
-        //- script alertify.success(`${errors}`, 25)
-        //- script alertify.success(`${errors}` ,25)
-
