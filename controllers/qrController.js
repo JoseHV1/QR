@@ -4,7 +4,10 @@ import qrcode from "qrcode";
 let image_qr;
 
 export function renderViewGenerate(req, res) {
-    res.render('index', {image_qr: req.flash("image"), errors: req.flash("messagesErrors")});
+    req.flash('messagesErrors', 'URL invalidate');
+    res.render('index', {
+        image_qr: req.flash("image"), errorUrlEmpty: req.flash("errorUrlEmpty"), errorUrlInvalidate: req.flash("errorUrlInvalidate"
+    )});
 }
 
 export async function generateQR(req, res) {
@@ -12,12 +15,12 @@ export async function generateQR(req, res) {
     const expRegURL = /^(http|https)\:\/\/[a-z0-9\.-]+\.[a-z]{2,4}/gi;
 
     if(!url_text){
-        req.flash('messagesErrors', 'Please enter a URL');
+        req.flash('errorUrlEmpty', 'error');
         return res.redirect('back');
     }
 
     if(!url_text.match(expRegURL)){
-        req.flash('messagesErrors', 'URL invalidate');
+        req.flash('errorUrlInvalidate', 'error');
         return res.redirect('back');
     }
 

@@ -27,17 +27,29 @@ window.onload = () => {
     //     console.log("Contenido: "+response);
     // });
 
-    var scanner = new Instascan.Scanner({ video: container_reader });
+    var scanner = new Instascan.Scanner({ 
+        video: container_reader, 
+        scanPeriod: 5, 
+        mirror: false 
+    });
+    
     scanner.addListener('scan', function (content, image) {
-        console.log(content);
-        console.log(image);
+        alert('escaneando');
+        alert('content '+ content);
+        alert('image '+ image);
+        window.open(''+ content)
         container_result.classList().remove('d_none');
         result.textContent = content;
     });
 
     Instascan.Camera.getCameras().then(function (cameras) {
+        alert(cameras);
         if (cameras.length > 0) {
-            scanner.start(cameras[0]);
+            scanner.start(cameras[1]);
+        } else {
+            alertify.error('Your device does not have web cameras installed');
         }
+    }).catch(function (e) {
+        alert(e);
     });
 }

@@ -9,9 +9,13 @@ block content
                     a(class="mx-2 nav-link text-white" href="/read") Read
 
                 h2(class="text-center text-white mb-4") READ
+                div(id="container_image" class="d-flex justify-content-center")
+                    img(src="/images/qr_code_default.png", alt="image-default" style="width: 19rem;")
+
                 div(id="container_result" class="d-none text-center")
                     h5(class="text-md-dark text-white") QR Url
-                    span(id="result" class="mt-2") 
+                    span(id="result" class="mt-2")
+                
 
             div(class="col-md-6 pt-4 d-flex justify-content-center") 
                 video(id="container_reader" class="border" style="width: 17rem; height: 19rem;")
