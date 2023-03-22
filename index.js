@@ -1,6 +1,7 @@
 import express from "express"
 import flash from "connect-flash";
 import session from "express-session";
+import cors from "cors";
 import path from "path";
 import { fileURLToPath } from 'url';
 import routes from "./routes/index.js";
@@ -8,6 +9,8 @@ import routes from "./routes/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
+
+app.use(cors());
 
 app.use(
     session({
