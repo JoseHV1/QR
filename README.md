@@ -5,7 +5,7 @@ Esta practica fue realizada principalmente en Node, sirve para generar y leer ur
 
 # 🚀 Hola, Soy Jose Hernandez! 👋
 
-Desarrollador Backend Junior, con 1 año de experiencia en el desarrollo de sistemas web, apasionado por la programacion, innovacion y el constante aprendizaje de forma autodidacta.
+Desarrollador Fullstack, con 3+ años de experiencia en el desarrollo de sistemas web, apasionado por la programacion, innovacion y el constante aprendizaje de forma autodidacta.
 
 ## Instalacion
 
